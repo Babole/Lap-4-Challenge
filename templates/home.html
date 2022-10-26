@@ -1,14 +1,24 @@
-{% extends "default.html %}
+{% extends "default.html" %}
+{% block head %}
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}"> -->
+{% endblock head %}
+{% block title %}{{title}}{% endblock %}
 
-{% block title %}URL Simplified{% endblock heading %}
-{% block heading %}URL Simplified{% endblock heading %}
 {% block content %}
-    <section>
-        <form action="/" method="POST">
-            <input type="text" name="url" placeholder="Enter link here">
-            <input type="submit" value="Shorten URL">
-            <span id="original_url">{{original_url}}</span>
-            <span id="shorten_url">{{shorten_url}}</span>
+    <h1>URL Simplified</h1>
+    <section id="formSection">
+        <form id="URLForm" action="/" method="POST">
+            <div id="URL">
+                <input type="text" id="original_URL" name="original_URL" placeholder="Input URL">
+                <input type="submit" id="btn" value="Shorten URL">
+            </div>
+            <div id="displaydetails">
+                <span id="full_URL">{{original_URL}}</span>
+                <span id="shorten_URL">www.urlsimplified/{{shorten_URL}}</span>
+            </div>
         </form>
+        
     </section>
-{% endblock content %}
+
+    <script src="{{ url_for('static', filename='/js/shortenURL.js') }}"></script>
+{% endblock %}
