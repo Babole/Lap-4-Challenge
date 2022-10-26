@@ -1,0 +1,14 @@
+{% extends "default.html %}
+
+{% block title %}URL Simplified{% endblock heading %}
+{% block heading %}URL Simplified{% endblock heading %}
+{% block content %}
+    <section>
+        <form action="/" method="POST">
+            <input type="text" name="url" placeholder="Enter link here">
+            <input type="submit" value="Shorten URL">
+            <span id="original_url">{{original_url}}</span>
+            <span id="shorten_url">{{shorten_url}}</span>
+        </form>
+    </section>
+{% endblock content %}
