@@ -1,5 +1,5 @@
-from listings import db
-from listings.models.listing import Listing
+from shortUrl import db
+from shortUrl.models.url import Url
 
 # Clear it all out
 

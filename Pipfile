@@ -10,6 +10,7 @@ flask-sqlalchemy = "*"
 python-dotenv = "*"
 gunicorn = "*"
 psycopg2 = "*"
+flask-marshmallow = "*"
 
 [dev-packages]
 pytest = "*"
@@ -20,4 +21,4 @@ python_version = "3.10"
 [scripts]
 init_db = "python init_db.py"
 dev = "flask run -p ${PORT}"
-start = "gunicorn listings:app"
+start = "gunicorn shortUrl:app"
