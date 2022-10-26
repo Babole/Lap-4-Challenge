@@ -1,0 +1,12 @@
+{% extends "default.html" %}
+{% block head %}
+{% endblock head %}
+
+{% block content %}
+<span id="url" style="display: none">{{original_URL}}</span>
+
+<script>
+    const url = document.getElementById('url')
+    window.location.href= url.textContent
+ </script>
+{% endblock %}
