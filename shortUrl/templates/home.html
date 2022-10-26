@@ -1,0 +1,22 @@
+{% extends "default.html" %}
+{% block head %}
+{% endblock head %}
+
+{% block content %}
+    <h1>URL Simplified</h1>
+    <section id="formSection">
+        <form id="URLForm" action="/urls" method="POST">
+            <div id="URL">
+                <input type="text" id="original_URL" name="original_URL" placeholder="Input URL">
+                <input type="submit" id="btn" value="Shorten URL">
+            </div>
+            <div id="displaydetails">
+                <span id="full_URL">{{original_URL}}</span> <br>
+                <span id="shorten_URL">http://localhost:5000/urls/{{shorten_URL}}</span>
+            </div>
+        </form>
+        
+    </section>
+
+    <script src="{{ url_for('static', filename='/js/shortenURL.js') }}"></script>
+{% endblock %}
